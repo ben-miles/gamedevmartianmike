@@ -20,10 +20,18 @@ func _physics_process(delta):
 	# JUMPING
 	if(Input.is_action_just_pressed("player_jump") && is_on_floor()):
 		velocity.y = -jump_force
-	
-#	if(velocity.x != 0):
-#		animated_sprite.play("run")
-#	else:
-#		animated_sprite.play("idle")
-		
+	# PHYSICS HANDLING
 	move_and_slide()
+	update_animations(direction)
+
+func update_animations(direction):
+	if(is_on_floor()):
+		if(direction == 0):
+			animated_sprite.play("idle")
+		else:
+			animated_sprite.play("run")
+	else:
+		if(velocity.y < 0):
+			animated_sprite.play("jump")
+		else:
+			animated_sprite.play("fall")
