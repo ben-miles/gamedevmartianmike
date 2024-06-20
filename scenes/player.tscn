@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://1tcxogxeyvfq"]
+[gd_scene load_steps=31 format=3 uid="uid://1tcxogxeyvfq"]
 
 [ext_resource type="Texture2D" uid="uid://cewc1ufxs1ciu" path="res://assets/textures/player/Fall (32x32).png" id="1_qyyyp"]
 [ext_resource type="Texture2D" uid="uid://cgtycw7tr1ex2" path="res://assets/textures/player/Idle (32x32).png" id="2_je2yw"]
@@ -195,6 +195,9 @@ animations = [{
 "speed": 20.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u02dv"]
+size = Vector2(15, 26)
+
 [node name="Player" type="CharacterBody2D"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -202,3 +205,6 @@ position = Vector2(0, -16)
 sprite_frames = SubResource("SpriteFrames_3sd31")
 animation = &"run"
 autoplay = "idle"
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, -13)
+shape = SubResource("RectangleShape2D_u02dv")
