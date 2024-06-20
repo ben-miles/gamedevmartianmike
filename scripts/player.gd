@@ -10,6 +10,8 @@ func _physics_process(delta):
 	if(!is_on_floor()):
 		velocity.y += gravity * delta
 	
+		if(velocity.y > 500):
+			velocity.y = 500
 	var direction = Input.get_axis("player_move_left", "player_move_right")
 	velocity.x = direction * speed
 	
