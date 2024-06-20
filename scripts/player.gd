@@ -16,7 +16,7 @@ func _physics_process(delta):
 	var direction = Input.get_axis("player_move_left", "player_move_right")
 	velocity.x = direction * speed
 	# JUMPING
-	if(Input.is_action_just_pressed("player_jump")):
+	if(Input.is_action_just_pressed("player_jump") && is_on_floor()):
 		velocity.y = -jump_force
 	
 #	if(velocity.x != 0):
