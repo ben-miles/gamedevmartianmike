@@ -1,5 +1,9 @@
 [gd_scene load_steps=4 format=3 uid="uid://didesosgg768u"]
 
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_hiu4q")
+hframes = 8
+
 [node name="Area2D" type="Area2D" parent="."]
 collision_layer = 8
 collision_mask = 2
