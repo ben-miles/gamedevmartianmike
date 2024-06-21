@@ -1,3 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://dwx2dc0kcridk"]
 
+[ext_resource type="Texture2D" uid="uid://bosbu8d622p2r" path="res://assets/textures/other/Spiked Ball.png" id="2_e3bvo"]
+
 [node name="SpikeBall" type="Node2D"]
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_e3bvo")
+
