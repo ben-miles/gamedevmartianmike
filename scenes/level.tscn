@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://c66jst726r5qp"]
+[gd_scene load_steps=6 format=3 uid="uid://c66jst726r5qp"]
 
 [ext_resource type="Script" path="res://scripts/level.gd" id="1_k8c4l"]
 [ext_resource type="PackedScene" uid="uid://1tcxogxeyvfq" path="res://scenes/player.tscn" id="2_cwmr7"]
@@ -23,3 +23,5 @@ texture = ExtResource("3_r6uan")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
 shape = SubResource("RectangleShape2D_c4yhe")
+
+[node name="Deathzone" type="Area2D" parent="."]
