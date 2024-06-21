@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://1tcxogxeyvfq" path="res://scenes/player.tscn" id="2_cwmr7"]
 [ext_resource type="Texture2D" uid="uid://cqklfgvcgftyj" path="res://icon.svg" id="3_r6uan"]
 [ext_resource type="PackedScene" uid="uid://cndjolpfk0x7n" path="res://scenes/jump_pad.tscn" id="4_6ikbi"]
+[ext_resource type="PackedScene" uid="uid://didesosgg768u" path="res://scenes/saw.tscn" id="5_7t65h"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c4yhe"]
 size = Vector2(1000, 20)
@@ -47,5 +48,10 @@ position = Vector2(228, 235)
 [node name="JumpPad2" parent="Objects" instance=ExtResource("4_6ikbi")]
 position = Vector2(172, 235)
 jump_force = 350
+
+[node name="Traps" type="Node2D" parent="."]
+
+[node name="Saw" parent="Traps" instance=ExtResource("5_7t65h")]
+position = Vector2(335, 211)
 
 [connection signal="body_entered" from="Deathzone" to="." method="_on_deathzone_body_entered"]
