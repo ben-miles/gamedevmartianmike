@@ -7,6 +7,9 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c4yhe"]
 size = Vector2(1000, 20)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_od1qu"]
+size = Vector2(1354, 20)
+
 [node name="Level" type="Node2D"]
 script = ExtResource("1_k8c4l")
 
@@ -25,3 +28,7 @@ texture = ExtResource("3_r6uan")
 shape = SubResource("RectangleShape2D_c4yhe")
 
 [node name="Deathzone" type="Area2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Deathzone"]
+position = Vector2(221, 343)
+shape = SubResource("RectangleShape2D_od1qu")
+
