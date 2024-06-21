@@ -1,3 +1,11 @@
 [gd_scene load_steps=14 format=3 uid="uid://cndjolpfk0x7n"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c35x5"]
+size = Vector2(21, 3)
+
 [node name="JumpPad" type="Area2D"]
+collision_mask = 2
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, -10.5)
+shape = SubResource("RectangleShape2D_c35x5")
+
