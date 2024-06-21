@@ -28,6 +28,9 @@ texture = ExtResource("3_r6uan")
 shape = SubResource("RectangleShape2D_c4yhe")
 
 [node name="Deathzone" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 2
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Deathzone"]
 position = Vector2(221, 343)
 shape = SubResource("RectangleShape2D_od1qu")
