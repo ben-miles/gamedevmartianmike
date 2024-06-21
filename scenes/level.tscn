@@ -17,7 +17,7 @@ script = ExtResource("1_k8c4l")
 position = Vector2(227, 142)
 
 [node name="Ground" type="StaticBody2D" parent="."]
-position = Vector2(-42, 241)
+position = Vector2(-122, 245)
 
 [node name="Sprite2D" type="Sprite2D" parent="Ground"]
 modulate = Color(0, 0, 0, 1)
