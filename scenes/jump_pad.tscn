@@ -1,0 +1,3 @@
+[gd_scene load_steps=14 format=3 uid="uid://cndjolpfk0x7n"]
+
+[node name="JumpPad" type="Area2D"]
