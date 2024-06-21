@@ -2,7 +2,13 @@
 
 [ext_resource type="Texture2D" uid="uid://bosbu8d622p2r" path="res://assets/textures/other/Spiked Ball.png" id="2_e3bvo"]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_8tcix"]
+radius = 13.0
+
 [node name="SpikeBall" type="Node2D"]
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_e3bvo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_8tcix")
 
