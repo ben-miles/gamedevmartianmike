@@ -55,3 +55,4 @@ jump_force = 350
 position = Vector2(335, 211)
 
 [connection signal="body_entered" from="Deathzone" to="." method="_on_deathzone_body_entered"]
+[connection signal="touched_player" from="Traps/Saw" to="." method="_on_trap_touched_player"]
