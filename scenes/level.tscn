@@ -35,3 +35,6 @@ collision_mask = 2
 position = Vector2(221, 343)
 shape = SubResource("RectangleShape2D_od1qu")
 
+[node name="StartPosition" type="Marker2D" parent="."]
+position = Vector2(285, 163)
+
