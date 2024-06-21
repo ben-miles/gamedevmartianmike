@@ -38,3 +38,4 @@ shape = SubResource("RectangleShape2D_od1qu")
 [node name="StartPosition" type="Marker2D" parent="."]
 position = Vector2(285, 163)
 
+[connection signal="body_entered" from="Deathzone" to="." method="_on_deathzone_body_entered"]
