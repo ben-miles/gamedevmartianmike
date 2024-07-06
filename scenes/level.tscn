@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://c66jst726r5qp"]
+[gd_scene load_steps=13 format=3 uid="uid://c66jst726r5qp"]
 
 [ext_resource type="Script" path="res://scripts/level.gd" id="1_k8c4l"]
 [ext_resource type="PackedScene" uid="uid://1tcxogxeyvfq" path="res://scenes/player.tscn" id="2_cwmr7"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://dwx2dc0kcridk" path="res://scenes/spike_ball.tscn" id="6_ey6e7"]
 [ext_resource type="PackedScene" uid="uid://iqmwe07nuicb" path="res://scenes/tile_map.tscn" id="7_bcbiu"]
 [ext_resource type="PackedScene" uid="uid://bw1iq18oheoms" path="res://scenes/start.tscn" id="9_xhw5n"]
+[ext_resource type="PackedScene" uid="uid://0pjjngx41ylw" path="res://scenes/exit.tscn" id="10_vx5r8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c4yhe"]
 size = Vector2(1000, 20)
@@ -20,9 +21,6 @@ size = Vector2(1354, 20)
 script = ExtResource("1_k8c4l")
 
 [node name="BG" parent="." instance=ExtResource("2_i8q2r")]
-
-[node name="Player" parent="." instance=ExtResource("2_cwmr7")]
-position = Vector2(227, 142)
 
 [node name="Ground" type="StaticBody2D" parent="."]
 position = Vector2(-71, -192)
@@ -71,5 +69,11 @@ layer_0/tile_data = PackedInt32Array(131050, 393216, 0, 196586, 393216, 1, 26212
 
 [node name="Start" parent="." instance=ExtResource("9_xhw5n")]
 position = Vector2(217, 208)
+
+[node name="Exit" parent="." instance=ExtResource("10_vx5r8")]
+position = Vector2(963, 176)
+
+[node name="Player" parent="." instance=ExtResource("2_cwmr7")]
+position = Vector2(227, 142)
 
 [connection signal="body_entered" from="Deathzone" to="." method="_on_deathzone_body_entered"]
