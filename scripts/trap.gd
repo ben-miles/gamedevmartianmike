@@ -7,4 +7,5 @@ func _on_area_2d_body_entered(body):
 		touched_player.emit()
 
 func test():
+#	Just to demonstrate that you can call a function from within the AnimationPlayer node: 
 	print('ding dong!')
