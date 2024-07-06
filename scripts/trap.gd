@@ -8,4 +8,4 @@ func _on_area_2d_body_entered(body):
 
 func test():
 #	Just to demonstrate that you can call a function from within the AnimationPlayer node: 
-	print('ding dong!')
+	pass
