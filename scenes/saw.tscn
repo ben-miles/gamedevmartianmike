@@ -58,7 +58,7 @@ _data = {
 "spin": SubResource("Animation_7a6ps")
 }
 
-[node name="Saw" type="Node2D"]
+[node name="Saw" type="Node2D" groups=["traps"]]
 script = ExtResource("1_1n3xq")
 
 [node name="Area2D" type="Area2D" parent="."]
