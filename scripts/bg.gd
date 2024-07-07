@@ -5,6 +5,9 @@ extends ParallaxBackground
 
 @onready var sprite = $ParallaxLayer/Sprite2D
 
+func _ready():
+	sprite.texture = bg_texture
+
 func _process(delta):
 	sprite.region_rect.position += delta * Vector2(scroll_speed, scroll_speed)
 	# Prevent region position from becoming an unmanagably huge int value
