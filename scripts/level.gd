@@ -49,8 +49,6 @@ func _on_level_timer_timeout():
 		hud.set_time_label(time_left)
 		if time_left < 0:
 			reset_player()
-			time_left = level_time
-			hud.set_time_label(time_left)
 
 func _on_trap_touched_player():
 	reset_player()
@@ -58,6 +56,8 @@ func _on_trap_touched_player():
 func reset_player():
 	player.velocity = Vector2.ZERO
 	player.global_position = start.global_position
+	time_left = level_time
+	hud.set_time_label(time_left)
 	
 func _on_exit_body_entered(body):
 	if body is Player:
